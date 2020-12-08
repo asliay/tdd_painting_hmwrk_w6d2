@@ -3,25 +3,25 @@ const Room = require("../room.js");
 
 describe("Room", function() {
 
-    let room;
+    let bedroom;
 
     beforeEach(function() {
-        room = new Room(15);
+        bedroom = new Room(15);
     });
 
     it("should have an area", function() {
-        const actual = room.area;
+        const actual = bedroom.area;
         assert.strictEqual(actual, 15);
     });
 
     it("should start not painted", function() {
-        const actual = room.isPainted;
+        const actual = bedroom.isPainted;
         assert.strictEqual(actual, false);
     });
 
     it("should be able to be painted", function() {
-        room.paintRoom();
-        const actual = room.isPainted;
+        bedroom.paintRoom();
+        const actual = bedroom.isPainted;
         assert.strictEqual(actual, true);
     });
 
