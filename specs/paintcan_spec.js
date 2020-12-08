@@ -23,7 +23,9 @@ describe("PaintCan", function () {
         assert.strictEqual(burntOrange.isEmpty, true);
     })
 
-    xit("should be able to empty itself", function() {
-        
+    it("should be able to empty itself", function() {
+        teal.emptyCan();
+        const actual = teal.isEmpty;
+        assert.strictEqual(actual, true);
     })
 })

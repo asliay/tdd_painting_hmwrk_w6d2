@@ -9,5 +9,9 @@ PaintCan.prototype.checkEmpty = function() {
     }
 }
 
+PaintCan.prototype.emptyCan = function() {
+    this.isEmpty = true;
+}
+
 
 module.exports = PaintCan;
