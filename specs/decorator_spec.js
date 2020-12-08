@@ -7,11 +7,13 @@ describe("Decorator", function() {
 
     let decorator;
     let teal;
+    let burntOrange;
     let bedroom;
 
     beforeEach(function() {
         decorator = new Decorator();
         teal = new PaintCan(10)
+        burntOrange = new PaintCan(5)
         bedroom = new Room(15)
     });
 
@@ -25,6 +27,13 @@ describe("Decorator", function() {
         const actual = decorator.paintStock;
         assert.deepStrictEqual(actual, [teal]);
 
+    })
+
+    it("should be able to calculate litres of paint in stock", function() {
+        decorator.addPaint(teal);
+        decorator.addPaint(burntOrange);
+        const actual = decorator.calculateLitres();
+        assert.strictEqual(actual, 15);
     })
 
 
