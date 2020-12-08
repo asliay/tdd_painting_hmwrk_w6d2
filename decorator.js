@@ -15,4 +15,17 @@ Decorator.prototype.calculateLitres = function() {
     }
     return totalLitres
 }
+
+Decorator.prototype.enoughPaint = function(room) {
+    totalPaint = this.calculateLitres()
+    if (totalPaint >= room.area) {
+        return true
+    } else {
+        return false
+    }
+
+
+}
+
+
 module.exports = Decorator;

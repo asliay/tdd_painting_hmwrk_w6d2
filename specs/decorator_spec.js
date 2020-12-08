@@ -36,5 +36,11 @@ describe("Decorator", function() {
         assert.strictEqual(actual, 15);
     })
 
+    it("should be able to calculate if enough paint to paint room", function() {
+        decorator.addPaint(teal);
+        decorator.addPaint(burntOrange);
+        const actual = decorator.enoughPaint(bedroom);
+        assert.strictEqual(actual, true);
+    })
 
 })
