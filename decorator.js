@@ -1,5 +1,3 @@
-const PaintCan = require("./paintcan.js")
-
 const Decorator = function () {
     this.paintStock = [];
 }
@@ -24,6 +22,13 @@ Decorator.prototype.enoughPaint = function(room) {
         return false
     }
 
+
+}
+
+Decorator.prototype.paintRoom = function(room) {
+    if (this.enoughPaint(room)){
+        room.isPainted = true
+    }
 
 }
 
