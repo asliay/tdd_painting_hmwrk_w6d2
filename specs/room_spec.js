@@ -14,6 +14,12 @@ describe("Room", function() {
         assert.strictEqual(actual, 15);
     });
 
+    it("should start not painted", function() {
+        const actual = room.painted;
+        assert.strictEqual(actual, false)
+
+    })
+
 
 
 
