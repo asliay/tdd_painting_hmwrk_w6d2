@@ -8,7 +8,7 @@ Decorator.prototype.addPaint = function(paintCan) {
 
 Decorator.prototype.calculateLitres = function() {
     let totalLitres = 0
-    for (paint of this.paintStock) {
+    for (const paint of this.paintStock) {
         totalLitres += paint.litre 
     }
     return totalLitres

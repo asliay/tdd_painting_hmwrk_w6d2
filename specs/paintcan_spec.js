@@ -17,15 +17,15 @@ describe("PaintCan", function () {
 
     it("should be able to check if empty", function() {
         teal.checkEmpty();
-        const actual = teal.isEmpty;
+        const actual = !teal.litre;
         assert.strictEqual(actual, false);
         burntOrange.checkEmpty();
-        assert.strictEqual(burntOrange.isEmpty, true);
+        assert.strictEqual(!burntOrange.litre, true);
     })
 
     it("should be able to empty itself", function() {
         teal.emptyCan();
-        const actual = teal.isEmpty;
+        const actual = teal.checkEmpty();
         assert.strictEqual(actual, true);
     })
 })
